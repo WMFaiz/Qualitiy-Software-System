@@ -1,0 +1,265 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    background-image: url(image/header_quality_assurance.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: auto;
+    background-color: white;
+}
+
+.bc {
+    position: absolute;
+    top: 5vh;
+    left: -2000px;
+    width: 92%;
+    height: 20vh;
+    padding: 10px;
+    background-color: rgb(60, 60, 60);
+    border-radius: 10px;
+    box-shadow: 0 0 7px black, 0 0 14px #0000FF;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: 0.5s;
+}
+
+.bc:hover{
+    background-color: white;
+    width: 100%;
+    color: rgb(60, 60, 60);
+    box-shadow: 0 0 250px black, 0 0 500px #0000FF;
+    transition: 0.5s;
+}
+
+.bc:hover .check {
+    color: white;
+    background-color: #19191A;
+    text-shadow: 0 0 20px white, 0 0 15px #0000FF; 
+}
+
+.bc:hover .bc #disc{
+    font-size: 20px;
+    transition: .5s;
+}
+
+.bc img {  
+    position: absolute;
+    border-radius: 10px;
+    left: 1.5vh;
+    top: 1.5vh;
+    width: 150px;
+    height: 130px;
+}
+
+.bc p {
+    padding: 5px 0 5px 50px;
+    text-shadow: 0 0 3px #0000FF;
+}
+
+.bc .check {
+    position: absolute;
+    right: 1vh;
+    top: 1vh; 
+    border: none;
+    height: 21vh;
+    font-weight: bold;
+    padding: 1vh;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #19191A;
+    background-color: white; 
+    cursor: pointer;
+    border-radius: 10px;
+    text-shadow: 0 0 10px black, 0 0 15px #0000FF;
+    outline: 0;
+    transition: .5s;    
+}
+
+.bc #disc {
+    font-size: 15px;
+    transition: .5s;
+}
+
+#PT_Title, #PO_Title, #PR_Title {
+    font-size: 20px;
+}
+
+.qc {
+    width: 87%;
+    height: 175px;
+    padding: 10px 0 10px 0;
+    margin: 20vh 20px 5px 80px;
+    background-color: rgb(60, 60, 60);
+    border-radius: 10px;
+    box-shadow: 0 0 10px black, 0 0 15px #0000FF;;
+    display: inline-block;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 0 0 3px #0000FF;
+}
+
+.qc p {
+    padding:  10px;
+}
+
+.option input {
+    margin: 40px 0 0 12%;
+}
+
+.qc .check {
+    margin-top: 80px;
+    border: none;
+    font-weight: bold;
+    padding: 1% 15% 1% 15%;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #19191A;
+    background-color: white; 
+    cursor: pointer;
+    border-radius: 0 0 10px 10px;
+    text-shadow: 0 0 10px black, 0 0 15px #0000FF;
+    outline: 0;
+    transition: .5s;    
+}
+
+#title {
+    text-align: center;
+    font-size: 20px;
+}
+
+.PT_Title, .PO_Title, .PR_Title, .output {
+    background-color: rgba(255,255,255,0.75);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #19191A;
+    text-align: center;
+    font-size: 35px;
+    text-shadow: 0 0 5px grey, 0 0 10px #0000FF;
+    font-weight: bold;
+}
+
+.output, .welcome, .section {
+    font-size: 50px;
+}
+
+.output {
+    position: absolute;
+    top: 0;
+}
+
+.done {
+    width: 95.5%;
+    margin: 5vh 20px 5vh 35px;
+    padding: 20px;
+    font-size: 30px;
+    outline: 0;
+    border: 0;
+    background-color: rgb(60, 60, 60);
+    text-shadow: 0 0 5px grey, 0 0 10px #0000FF;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px grey, 0 0 10px black;
+    transition: 0.5s;
+}
+
+.done:hover {
+    color: rgb(60, 60, 60);
+    background-color: white;
+    box-shadow: 0 0 250px black, 0 0 500px #0000FF;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.qc #disc {
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.content1 ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #19191A;
+    width: 50px;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.content1 ul p {
+    margin-top: 20px;
+    margin-left: 120px;
+}
+
+.content1 ul:hover {
+    width: 61%;
+    transition: 0.5s;
+}
+
+.content1 ul:hover .bc {
+    left: 0;
+    margin: 20px;
+    position: relative;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.myspeedometer, .myspeedometer1, .myspeedometer2 {
+    position: absolute;
+}
+
+.myspeedometer h2{
+    position: absolute;
+    top: 250px;
+    margin-left: 200px;
+    padding: 20px 0 20px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 35px;
+    text-shadow: 0 0 5px grey, 0 0 10px #0000FF;
+    font-weight: bold;
+} 
+
+.myspeedometer1 h2{
+    position: absolute;
+    top: 250px;
+    margin-left: 630px;
+    padding: 20px 0 20px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 35px;
+    text-shadow: 0 0 5px grey, 0 0 10px #0000FF;
+    font-weight: bold;
+} 
+
+.myspeedometer2 h2{
+    position: absolute;
+    top: 250px;
+    margin-left: 1000px;
+    padding: 20px 0 20px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 35px;
+    text-shadow: 0 0 5px grey, 0 0 10px #0000FF;
+    font-weight: bold;
+} 
+
+.myspeedometer3 h2{
+    position: absolute;
+    top: 535px;
+    left: 95vh;
+    padding: 20px 0 20px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 35px;
+    text-shadow: 0 0 5px grey, 0 0 10px #0000FF;
+    font-weight: bold;
+} 

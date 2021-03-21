@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Software Quality</title>
+</head>
+
+<body onload="draw();">
+    <div class="content1">
+        <ul>
+            <li class="bc">
+                <p id="PT_Title">Product Transition</p>
+                <img src="image/shutterstock_370520183.jpg">
+                <p id="disc">Portability, Reusability, Interoperability.</p>
+                <input type="button" value="Take this Test" id="PT_Title" class="check"
+                    onclick="moveToPage($(this).attr('id'));">
+            </li>
+            <li class="bc">
+                <p id="PO_Title">Product Operation</p>
+                <img src="image/istockphoto-623886084-1024x1024.jpg">
+                <p id="disc">Correctness, Reliability, Efficiency, Integrity, Usability.</p>
+                <input type="button" value="Take this Test" id="PO_Title" class="check"
+                    onclick="moveToPage($(this).attr('id'));">
+            </li>
+            <li class="bc">
+                <p id="PR_Title">Product Revision</p>
+                <img src="image/revision-2_med.jpeg">
+                <p id="disc">Maintainability, Flexibility, Testability.</p>
+                <input type="button" value="Take this Test" id="PR_Title" class="check"
+                    onclick="moveToPage($(this).attr('id'));">
+            </li>
+        </ul>
+    </div>
+    <div class="content2">
+        <ul class="PT_ul">
+            <div class="PT_Title">Product Transition</div>
+            <div class="portability_qc">
+                <!-- <p id="title">Portability</p> -->
+                <div class="protability">
+                    <li class="qc">
+                        <div class="0" name="">
+                            <p>Question 1</p>
+                            <p id="disc">Is it possible for this system to be used in both windows and mac?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                </div>
+            </div>
+            <div class="reusability_qc">
+                <!-- <p id="title">Reusability</p> -->
+                <div class="reusability">
+                    <li class="qc">
+                        <div class="1" name="">
+                            <p>Question 2</p>
+                            <p id="disc">Does this system allow users to do renewal membership and checks the validity of memberships?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                </div>
+            </div>
+            <div class="interoperability_qc">
+                <!-- <p id="title">Interoperability</p> -->
+                <div class="interoperability">
+                    <li class="qc">
+                        <div class="2" name="">
+                            <p>Question 3</p>
+                            <p id="disc">Does this system can integrate well with other software system?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                    <li class="qc">
+                        <div class="3" name="">
+                            <p>Question 4</p>
+                            <p id="disc">Does your system allow you to process the output as an input in other software system?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </ul>
+        <ul class="PO_ul">
+            <div class="PO_Title">Product Operation</div>
+            <div class="correctness_qc">
+                <!-- <p id="title">Correctness</p> -->
+                <div class="correctness">
+                    <li class="qc">
+                        <div class="4" name="">
+                            <p>Question 1</p>
+                            <p id="disc">Does your system give the output you want?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                    <li class="qc">
+                        <div class="5" name="">
+                            <p>Question 2</p>
+                            <p id="disc">Does your system sometimes give unexpected output?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                    <li class="qc">
+                        <div class="6" name="">
+                            <p>Question 3</p>
+                            <p id="disc">Does your system provide full information</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                    <li class="qc">
+                        <div class="7" name="">
+                            <p>Question 4</p>
+                            <p id="disc">Does the latest output include in the system?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                    <li class="qc">
+                        <div class="8" name="">
+                            <p>Question 5</p>
+                            <p id="disc">Did the system delayed too long to respond?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                    <li class="qc">
+                        <div class="9" name="">
+                            <p>Question 6</p>
+                            <p id="disc">Did the system is fulfilling client's requirmenets?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                </div>
+            </div>
+            <div class="reliability_qc">
+                <!-- <p id="title">Reliability</p> -->
+                <div class="reliability">
+                    <li class="qc">
+                        <div class="10" name="">
+                            <p>Question 7</p>
+                            <p id="disc">Does your system can tolerate to errors?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                    <li class="qc">
+                        <div class="11" name="">
+                            <p>Question 8</p>
+                            <p id="disc">Does your system have limited amount of toleration to errors?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                    <li class="qc">
+                        <div class="12" name="">
+                            <p>Question 9</p>
+                            <p id="disc">If the system is failing, does your whole system need to be restart?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                </div>
+            </div>
+            <div class="efficiency_qc">
+                <!-- <p id="title">Efficiency</p> -->
+                <div class="efficiency">
+                    <li class="qc">
+                        <div class="13" name="">
+                            <p>Question 10</p>
+                            <p id="disc">Is the hardware is fast enough to handle all the function that your system is
+                                required?
+                            </p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                    <li class="qc">
+                        <div class="14" name="">
+                            <p>Question 11</p>
+                            <p id="disc">Is your hardware have backup power if anything happen to power station?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                </div>
+            </div>
+            <div class="integrity_qc">
+                <!-- <p id="title">Integrity</p> -->
+                <div class="integrity">
+                    <li class="qc">
+                        <div class="15" name="">
+                            <p>Question 12</p>
+                            <p id="disc">Does your system allowed someone access wihtout authorization?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                    <li class="qc">
+                        <div class="16" name="">
+                            <p>Question 13</p>
+                            <p id="disc">Does the system allowed everyone to add and edit the data?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                </div>
+            </div>
+            <div class="usability_qc">
+                <!-- <p id="title">Usability</p> -->
+                <div class="usability">
+                    <li class="qc">
+                        <div class="17" name="">
+                            <p>Question 14</p>
+                            <p id="disc">Do you take less then a day to understand the system completely?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </ul>
+        <ul class="PR_ul">
+            <div class="PR_Title">Product Revision</div>
+            <div class="maintainability_qc">
+                <!-- <p id="title">Maintainability</p> -->
+                <div class="maintainability">
+                    <li class="qc">
+                        <div class="18" name="">
+                            <p>Question 1</p>
+                            <p id="disc">If the system is failing, do you can identify the reasons of the failures?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                    <li class="qc">
+                        <div class="19" name="">
+                            <p>Question 2</p>
+                            <p id="disc">Did you skip the failures in the system?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                    <li class="qc">
+                        <div class="20" name="">
+                            <p>Question 3</p>
+                            <p id="disc">Do you test the system after you skip the failure of the system?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                </div>
+            </div>
+            <div class="flexibility_qc">
+                <!-- <p id="title">Flexibility</p> -->
+                <div class="flexibility">
+                    <li class="qc">
+                        <div class="21" name="">
+                            <p>Question 4</p>
+                            <p id="disc">Does your system can tolerate with the changes of commercial enviroment?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                </div>
+            </div>
+            <div class="testability_qc">
+                <!-- <p id="title">Testability</p> -->
+                <div class="testability">
+                    <li class="qc">
+                        <div class="22" name="">
+                            <p>Question 5</p>
+                            <p id="disc">Does software tester estimate the difficulty an exploring the defects in software products?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                    <li class="qc">
+                        <div class="23" name="">
+                            <p>Question 6</p>
+                            <p id="disc">Does the cause of the software failure that is detected by maintenance techicians will deal with the automatic check?</p>
+                            <div class="option">
+                                <input type="radio" class="radio" value="10" id="yes"> Yes
+                                <input type="radio" class="radio" value="5" id="maybe"> Maybe
+                                <input type="radio" class="radio" value="0" id="probably"> Probably
+                                <input type="radio" class="radio" value="-5" id="barely"> Barely
+                                <input type="radio" class="radio" value="-10" id="no"> No
+                            </div><br>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </ul>
+    </div>
+    <div class="content3">
+        <!-- <p class="output">Result</p> -->
+        <div class="myspeedometer">
+            <canvas id="speedometer" width="1000" height="600">Canvas not available.</canvas>
+            <input type="number" name="I_speedometer" id="I_speedometer" value="0" style="display:none">
+            <h2>Transition</h2>
+        </div>
+        <div class="myspeedometer1">
+            <canvas id="speedometer1" width="1000" height="600">Canvas not available.</canvas>
+            <input type="number" name="I_speedometer1" id="I_speedometer1" value="0" style="display:none">
+            <h2>Revision</h2>
+        </div>
+        <div class="myspeedometer2">
+            <canvas id="speedometer2" width="1350" height="600">Canvas not available.</canvas>
+            <input type="number" name="I_speedometer2" id="I_speedometer2" value="0" style="display:none">
+            <h2>Operation</h2>
+        </div>
+        <div class="myspeedometer3">
+            <canvas id="speedometer3" width="1000" height="600">Canvas not available.</canvas>
+            <input type="number" name="I_speedometer3" id="I_speedometer3" value="0" style="display:none">
+            <h2>Overall</h2>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+<script src='speedometer.js'></script>
+</html>
